@@ -1,0 +1,88 @@
+  /* 1. Styling για τα Πεδία (Inputs & Textarea) */
+.fluentform .ff-el-form-control {
+    background: #050719 !important; 
+    color: white !important;
+    border: 2px solid #1a1d35 !important; /* input border  */
+    border-radius: 10px !important;
+    padding: 15px !important;
+    transition: all 0.4s ease !important;
+    position: relative;
+    width: 100% !important; 
+    max-width: 637px; 
+    height: auto !important; 
+    min-height: 50px; /* input height */
+}
+
+/* 2. Gradient "Focus style"  */
+.fluentform .ff-el-form-control:focus {
+    outline: none !important;
+    /* Focus gradient border */
+    border-color: transparent !important;
+    background-image: linear-gradient(#050719, #050719), 
+                      linear-gradient(180deg, #AF40FF 0%, #00DDEB 100%) !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
+    box-shadow: 0 0 15px rgba(0, 221, 235, 0.2) !important;
+}
+
+/* 3. Styling για το Κουμπί */
+.fluentform .ff-btn-submit {
+    background: #050719 !important; 
+    width: 200px !important;
+    height: 60px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.5s linear !important;
+}
+
+/* Button Gradient border */
+.fluentform .ff-btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) !important;
+    z-index: -2;
+    border-radius: 10px;
+}
+
+/* Gradient hover */
+.fluentform .ff-btn-submit::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px; right: 2px; bottom: 2px; 
+    background: #050719; 
+    border-radius: 8px;
+    z-index: -1;
+    opacity: 1; 
+    transition: opacity 0.5s linear !important;
+}
+
+/* button hover effects */
+.fluentform .ff-btn-submit:hover::after {
+    opacity: 0 !important; 
+}
+
+.fluentform .ff-btn-submit:hover {
+    background: transparent !important;
+    box-shadow: 0 0 20px rgba(0, 221, 235, 0.4) !important;
+    transform: translateY(-2px);
+}
+    /*Mobile Tablet Resposnsive*/
+  @media (max-width: 1023px) {
+    .fluentform .ff-el-form-control {
+       max-width: 100%; /* Στο tablet/mobile καταλαμβάνει όλο το πλάτος της στήλης */
+    }
+    
+    /* button align στο κινητο  */
+    .fluentform .ff-el-group.ff-textAlign-left {
+       text-align: center !important;
+    }
+}

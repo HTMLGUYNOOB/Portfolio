@@ -1,0 +1,66 @@
+/* Επιλογή των στοιχείων button και link (a) */
+    button, a {
+        background: #050719 !important;
+        width: 200px;
+        height: 70px;
+        position: relative; 
+        z-index: 1;
+        border: none !important;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 1s linear !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; /* αφάιρεση υπογράμμισης για το <a> */
+    }
+
+    /* Button Gradient style */
+    button::before, a::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        /* Gradient */
+        background: linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) !important;
+        z-index: -2;
+        border-radius: 10px;
+    }
+
+    /* Click button gradient style  */
+    button::after, a::after {
+        content: '';
+        position: absolute;
+        top: 3px; left: 3px; right: 3px; bottom: 3px; 
+        background: #050719; 
+        border-radius: inherit;
+        z-index: -1;
+        opacity: 1; 
+        transition: opacity 1s linear !important;
+    }
+
+    /* Hover  */
+    button:hover::after, a:hover::after {
+        opacity: 0;
+    }
+
+    button:hover, a:hover {
+        background: transparent !important; 
+        box-shadow: 0 0 20px rgba(0, 221, 235, 0.4); /* glow effect */
+    }
+
+    /* Tablet/Mobile Responsive */
+    @media (max-width: 1119px) {
+        button, a {
+            width: 160px !important; 
+            height: 55px !important;  
+            font-size: 14px !important; 
+        }
+        
+       /*Button*/
+        button::after, a::after {
+            top: 3px; 
+            left: 3px; 
+            right: 3px; 
+            bottom: 3px;
+        }
+    }
