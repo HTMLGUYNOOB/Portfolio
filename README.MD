@@ -115,3 +115,5 @@
 - **Live Website::** [\[apospan.com\]](https://apospan.com/)
 
 - **LinkedIn:** [\[Panagiotis Apostolelis\]](https://www.linkedin.com/in/panagiotis-apostolelis/)
+
+- **Figma:** [\[Παναγιώτης Αποστολέλης\]](https://www.figma.com/@PanApos)
