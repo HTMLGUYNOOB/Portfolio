@@ -112,7 +112,7 @@
 
 ## Links
 
-- **Live Website::** [\[apospan.com\]](https://apospan.com/)
+- **Live Website:** [\[apospan.com\]](https://apospan.com/)
 
 - **LinkedIn:** [\[Panagiotis Apostolelis\]](https://www.linkedin.com/in/panagiotis-apostolelis/)
 
