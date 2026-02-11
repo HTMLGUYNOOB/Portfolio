@@ -1,0 +1,308 @@
+/* Project Layout */
+.custom-projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 30px !important;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* General style για τα project card */
+.project-card-custom {
+    display: flex !important;
+    background: #05062D;
+    background: linear-gradient(#05062D, #05062D) padding-box, 
+                linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) border-box;
+    border: 5px solid transparent;
+    border-radius: 25px;
+    padding: 30px;
+    gap: 30px;
+    height: 350px;
+    position:relative;
+    box-sizing: border-box;
+}
+
+/*  Κεντρικό Project Μεγάλο project card */
+.custom-projects-grid .project-card-custom:nth-child(1) {
+    grid-column: span 2 !important;  
+    flex-direction: row !important; 
+    justify-self: center;
+    max-width: 900px;
+    width: 100%;  
+}
+
+/* Layout 2-3 project μικρό project card */
+.custom-projects-grid .project-card-custom:nth-child(n+2) {
+    grid-column: span 1 !important;
+    max-width: 620px;
+    width: 100%;
+    justify-self: center;
+}
+
+
+ 
+/* Image */
+.project-card-image {
+    flex: 0 0 200px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.project-card-image img {
+    border-radius: 20px;
+    display: block;
+    object-fit: cover;
+    margin: auto;
+}
+
+/* 1ο Project (Μεγάλο) */
+.custom-projects-grid .project-card-content:nth-child(1), .project-card-image img {
+    width: 276px;
+    height: 289px;
+}
+
+/* 2ο & 3ο Project (Μικρά) */
+
+.custom-projects-grid .project-card-content:nth-child(n+2), .project-card-image img { 
+    width: 221px;
+    height: 232px;
+}
+
+
+/*  Το κείμενο */
+.project-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.project-card-content h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Inter',sans-serif;
+}
+.project-card-content p {
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Inter',sans-serif;
+    display: -webkit-box;
+    overflow: hidden;
+    /* 3 γραμμές κείμενο στο μεγάλο Project card*/
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    
+}
+/* 2 γραμμές κείμενο στα μικρά project card */
+.custom-projects-grid .project-card-custom:nth-child(n+2) .project-card-content p {
+    -webkit-line-clamp: 2; 
+
+
+/*  Το κουμπί */
+}
+.project-btn {
+    background: #050719 !important;
+    width: 140px;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    z-index: 1;
+    border: none !important;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s linear !important; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    
+}
+
+/*  Gradient Layer */
+.project-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) !important;
+    z-index: -2;
+}
+
+/* Το Εσωτερικό Layer (Border effect) */
+.project-btn::after {
+    content: '';
+    position: absolute;
+    top: 3px; left: 3px; right: 3px; bottom: 3px; 
+    background: #050719;
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.3s linear !important;
+}
+
+/* Hover Effects */
+.project-btn:hover::after {
+    opacity: 0;
+}
+
+.project-btn:hover {
+    background: transparent !important;
+    box-shadow: 0 0 20px rgba(0, 221, 235, 0.4);
+    color: #ffffff !important;
+}
+
+
+/*Read more button*/
+.read-more-btn {
+    background: transparent;
+    color: #8541F9;
+    margin-bot: 10px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    
+}
+
+
+.read-more-btn:hover {
+    color:#00DDEB;
+}
+
+/* 5. POPUP (Modals) */
+.custom-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 10000;
+    display: none; /* Κρυφό αρχικά */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    background: #05062D;
+    background: linear-gradient(#05062D, #05062D) padding-box, 
+                linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) border-box;
+    border: 5px solid transparent;
+    border-radius: 25px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* --- RESPONSIVE: TABLET & MOBILE (Κάτω από 1119px) --- */
+@media (max-width: 1119px) {
+    
+    /* - */
+    .custom-projects-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 40px !important;
+    }
+
+    /* Project cards */
+    .project-card-custom, 
+    .custom-projects-grid .project-card-custom:nth-child(n) { 
+        grid-column: span 1 !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important; 
+        max-width: 500px !important; 
+        margin: 0 auto !important;
+        padding: 30px !important;
+        text-align: center !important;
+    }
+
+    /* Project Image*/
+    .project-card-image {
+        width: 100% !important;
+        flex: 0 0 auto !important;
+        margin-bottom: 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    
+    .project-card-image img {
+        width: 221px !important; 
+        height: 232px !important;
+        margin: 0 auto !important;
+        object-fit: cover !important;
+    }
+
+    /*  Περιεχόμενο Κειμένου */
+    .project-card-content {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 0 80px 0 !important; /* bottom padding για το κουμπί */
+    }
+
+    /* Το κουμπί κλειδώνει στο κέντρο κάτω */
+    .project-btn {
+        position: absolute !important;
+        bottom: 25px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+    }
+}
+
+/*  POPUP  */
+.modal-content {
+    background: #05062D;
+    background: linear-gradient(#05062D, #05062D) padding-box, 
+                linear-gradient(180deg, #AF40FF 0%, #8541F9 50%, #00DDEB 100%) border-box;
+    border: 5px solid transparent;
+    border-radius: 20px !important;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.modal-content h2 {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    max-height: 60vh;
+    overflow-y: auto;
+}
